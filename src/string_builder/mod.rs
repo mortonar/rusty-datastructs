@@ -1,13 +1,14 @@
-#[derive(Default)]
+use crate::arraylist::ArrayList;
+
 pub struct StringBuilder {
     // TODO make this an array and control the resizing ourselves
-    content: Vec<String>,
+    content: ArrayList<String>,
 }
 
 impl StringBuilder {
     pub fn new() -> Self {
         StringBuilder {
-            content: Vec::new(),
+            content: ArrayList::new(),
         }
     }
 
@@ -17,7 +18,7 @@ impl StringBuilder {
     }
 
     pub fn capacity(&self) -> usize {
-        self.content.capacity()
+        self.content.cap()
     }
 
     pub fn length(&self) -> u64 {

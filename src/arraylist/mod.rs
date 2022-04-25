@@ -92,7 +92,7 @@ impl<T> ArrayList<T> {
         self.buf.ptr.as_ptr()
     }
 
-    fn cap(&self) -> usize {
+    pub fn cap(&self) -> usize {
         self.buf.cap
     }
 
